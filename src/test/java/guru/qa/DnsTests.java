@@ -40,7 +40,7 @@ public class DnsTests {
             "Компьютеры",
             "Офис и сеть"
     })
-    
+
     @ParameterizedTest()
     @DisplayName("Open all tabs using csv source")
     void openTabsWithCSVSource(String tabName) {
@@ -60,7 +60,7 @@ public class DnsTests {
 
     @MethodSource("testWithMethodSource")
     @ParameterizedTest()
-    @DisplayName("Open all tabs using enum source")
+    @DisplayName("Open all tabs using item index and method source")
     void openTabsWithMethodSource(int number, String title) {
         Configuration.startMaximized = true;
         page.openMainPage()
